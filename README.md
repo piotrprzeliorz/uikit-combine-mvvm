@@ -16,4 +16,4 @@
 * **UICollectionViewCompositionalLayout**
 * **UICollectionViewDiffableDataSource**
 
-![Preview](https://github.com/piotrprzeliorz/emoji-picker/blob/main/example.gif?style=centerme)
+![Preview](https://github.com/piotrprzeliorz/uikit-combine-mvvm/blob/main/example.gif)
