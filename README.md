@@ -16,4 +16,7 @@
 * **UICollectionViewCompositionalLayout**
 * **UICollectionViewDiffableDataSource**
 
-![Preview](https://github.com/piotrprzeliorz/uikit-combine-mvvm/blob/main/example.gif)
+<p align="center">
+<img width="50%" src=https://github.com/piotrprzeliorz/uikit-combine-mvvm/blob/main/example.gif>
+</p>
+<p style="text-align: center;">  </p>
