@@ -69,9 +69,11 @@ private extension EmojiPickerViewController {
         let input = EmojiPickerViewModelInput(searchQuery: searchQuery,
                                               selectedEmoji: selectedEmoji)
         let output = viewModel.transform(input: input)
-        ViewBinder.bind(dataSource: dataSource,
-                        output: output,
-                        disposeBag: &viewModel.disposeBag)
+        ViewBinder.bind(
+            dataSource: dataSource,
+            output: output,
+            disposeBag: &viewModel.disposeBag
+        )
     }
 }
 
@@ -87,5 +89,11 @@ private extension EmojiPickerViewController {
         popoverPresentationController.delegate = presentationContext.delegate
         popoverPresentationController.permittedArrowDirections = [.up, .down]
         popoverPresentationController.sourceView = presentationContext.sourceView
+        if #available(iOS 16.0, *) {
+            popoverPresentationController.sourceItem = presentationContext.sourceItem
+        } else {
+            let sourceRect = presentationContext.sourceItem.convert(presentationContext.sourceItem.frame, to: customView)
+            popoverPresentationController.sourceRect = sourceRect
+        }
     }
 }
